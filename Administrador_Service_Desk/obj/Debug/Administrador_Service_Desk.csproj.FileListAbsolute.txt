@@ -1,0 +1,20 @@
+c:\users\juan yáñez\documents\visual studio 2015\Projects\Administrador_Service_Desk\Administrador_Service_Desk\bin\Debug\Administrador_Service_Desk.exe.config
+c:\users\juan yáñez\documents\visual studio 2015\Projects\Administrador_Service_Desk\Administrador_Service_Desk\bin\Debug\Administrador_Service_Desk.exe
+c:\users\juan yáñez\documents\visual studio 2015\Projects\Administrador_Service_Desk\Administrador_Service_Desk\bin\Debug\Administrador_Service_Desk.pdb
+c:\users\juan yáñez\documents\visual studio 2015\Projects\Administrador_Service_Desk\Administrador_Service_Desk\obj\Debug\Administrador_Service_Desk.csprojResolveAssemblyReference.cache
+c:\users\juan yáñez\documents\visual studio 2015\Projects\Administrador_Service_Desk\Administrador_Service_Desk\obj\Debug\Administrador_Service_Desk.Form1.resources
+c:\users\juan yáñez\documents\visual studio 2015\Projects\Administrador_Service_Desk\Administrador_Service_Desk\obj\Debug\Administrador_Service_Desk.Properties.Resources.resources
+c:\users\juan yáñez\documents\visual studio 2015\Projects\Administrador_Service_Desk\Administrador_Service_Desk\obj\Debug\Administrador_Service_Desk.csproj.GenerateResource.Cache
+c:\users\juan yáñez\documents\visual studio 2015\Projects\Administrador_Service_Desk\Administrador_Service_Desk\obj\Debug\Administrador_Service_Desk.exe
+c:\users\juan yáñez\documents\visual studio 2015\Projects\Administrador_Service_Desk\Administrador_Service_Desk\obj\Debug\Administrador_Service_Desk.pdb
+C:\Users\Juan Yáñez\documents\visual studio 2015\Projects\Administrador_Service_Desk\Administrador_Service_Desk\obj\Debug\Administrador_Service_Desk.csproj.ResolveComReference.cache
+C:\Users\Cosorio\Desktop\JUAN\_Códigos\ADM_SD\Administrador_Service_Desk\bin\Debug\Administrador_Service_Desk.exe.config
+C:\Users\Cosorio\Desktop\JUAN\_Códigos\ADM_SD\Administrador_Service_Desk\obj\Debug\Administrador_Service_Desk.csproj.ResolveComReference.cache
+C:\Users\Cosorio\Desktop\JUAN\_Códigos\ADM_SD\Administrador_Service_Desk\obj\Debug\Administrador_Service_Desk.exe
+C:\Users\Cosorio\Desktop\JUAN\_Códigos\ADM_SD\Administrador_Service_Desk\obj\Debug\Administrador_Service_Desk.pdb
+C:\Users\Cosorio\Desktop\JUAN\_Códigos\ADM_SD\Administrador_Service_Desk\bin\Debug\Administrador_Service_Desk.exe
+C:\Users\Cosorio\Desktop\JUAN\_Códigos\ADM_SD\Administrador_Service_Desk\bin\Debug\Administrador_Service_Desk.pdb
+C:\Users\Cosorio\Desktop\JUAN\_Códigos\ADM_SD\Administrador_Service_Desk\obj\Debug\Administrador_Service_Desk.csprojResolveAssemblyReference.cache
+C:\Users\Cosorio\Desktop\JUAN\_Códigos\ADM_SD\Administrador_Service_Desk\obj\Debug\Administrador_Service_Desk.Form1.resources
+C:\Users\Cosorio\Desktop\JUAN\_Códigos\ADM_SD\Administrador_Service_Desk\obj\Debug\Administrador_Service_Desk.Properties.Resources.resources
+C:\Users\Cosorio\Desktop\JUAN\_Códigos\ADM_SD\Administrador_Service_Desk\obj\Debug\Administrador_Service_Desk.csproj.GenerateResource.Cache

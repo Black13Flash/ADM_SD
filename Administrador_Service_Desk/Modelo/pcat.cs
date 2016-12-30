@@ -8,6 +8,8 @@ using Administrador_Service_Desk.WSDL;
 using Administrador_Service_Desk.Modelo;
 //XML
 using System.Xml;
+//DIAG
+using System.Diagnostics;
 
 namespace Administrador_Service_Desk.Modelo
 {
@@ -205,7 +207,7 @@ namespace Administrador_Service_Desk.Modelo
                     int listaHandle = lista.listHandle;
                     int listaLength = lista.listLength;
                     
-                    string[] att = new string[13];
+                    string[] att = new string[11];
                     att[0] = "id";
                     att[1] = "persistent_id";
                     att[2] = "sym";
@@ -221,41 +223,107 @@ namespace Administrador_Service_Desk.Modelo
 
                     ////////////////////////////////////////////////
                     //
-                    //        CAMBIOS APARTIR DE AQUÍ
+                    //        TRABAJAR CON LA LISTAS
                     //
                     ////////////////////////////////////////////////
 
                     if (listaLength > 0)
                     {
+                        float cantidad = listaLength;
+                        float vueltas = cantidad / 10;
+                        float otraVuelta = vueltas - ((float)((int)vueltas));
+                        bool resto = false;
+
+                        if (otraVuelta > 0)
+                        {
+                            resto = true;
+                        }
+
                         listaPcat = new List<pcat>();
 
-                        string query_xml = usd.getListValues(sid, listaHandle, 1, 2, att);
+                        int vueltasEntero = (int)vueltas;
+                        //int acum = 0;
 
-                        XmlDocument xmlDoc = new XmlDocument();
+                        int ini = 0;
+                        int fin = 9;
 
-                        if (query_xml != null)
+                        for (int i = 0; i < vueltasEntero; i++)
                         {
-                            xmlDoc.LoadXml(query_xml);
+                            string query_xml = usd.getListValues(sid, listaHandle, ini, fin, att);
+                            int acum = 0;
+                            //Debug.WriteLine("XML==============>"+query_xml);
 
-                            XmlNodeList listaXml = xmlDoc.GetElementsByTagName("AttrValue");
+                            XmlDocument xmlDoc = new XmlDocument();
 
-                            if (listaXml.Count > 0)
+                            if (query_xml != null)
                             {
-                                pcat categoria = new pcat();
+                                xmlDoc.LoadXml(query_xml);
 
-                                categoria.Id = Convert.ToInt32(listaXml[0].InnerXml);
-                                categoria.Persistent_id = listaXml[1].InnerXml;
-                                categoria.Sym = listaXml[2].InnerXml;
-                                categoria.Del = Convert.ToInt32(listaXml[3].InnerXml);
-                                categoria.Group_id = listaXml[4].InnerXml;
-                                categoria.Service_type = listaXml[5].InnerXml;
-                                categoria.Cr_flag = Convert.ToInt32(listaXml[6].InnerXml);
-                                categoria.In_flag = Convert.ToInt32(listaXml[7].InnerXml);
-                                categoria.Pr_flag = Convert.ToInt32(listaXml[8].InnerXml);
+                                XmlNodeList listaXml = xmlDoc.GetElementsByTagName("AttrValue");
 
-                                listaPcat.Add(categoria);
+                                Debug.WriteLine("listaXML:::::::::::::::::::::::::::: " + listaXml.Count);
+
+                                if (listaXml.Count > 0)
+                                {
+                                    int cantAtt = att.Length;
+                                    Debug.WriteLine("cantAtt:::::::::::::::: " + cantAtt);
+
+                                    for (int zz = 0; zz < listaXml.Count; zz++)
+                                    {
+                                        Debug.WriteLine("zz[" + zz + "]==" + listaXml[zz].InnerXml);
+                                    }
+
+                                    //aqui el for
+
+                                    for (int y = 1; y < cantAtt; y++)
+                                    {
+                                        pcat categoria = new pcat();
+                                        Debug.WriteLine("y:::::::::::::::: LISTA[" + y+"]");
+
+                                        categoria.Id = Convert.ToInt32(listaXml[acum].InnerXml);
+                                        Debug.WriteLine("categoria.Id :::::::"+acum+"::::::::: " + categoria.Id);
+                                        acum++;
+                                        categoria.Persistent_id = listaXml[acum].InnerXml;
+                                        Debug.WriteLine("categoria.Pers ::::::::" + acum + "::::::::: " + categoria.Persistent_id);
+                                        acum++;
+                                        categoria.Sym = listaXml[acum].InnerXml;
+                                        Debug.WriteLine("categoria.sym :::::::" + acum + ":::::::::: " + categoria.Sym);
+                                        acum++;
+                                        categoria.Del = Convert.ToInt32(listaXml[acum].InnerXml);
+                                        Debug.WriteLine("categoria.Del ::::::" + acum + "::::::::::: " + categoria.Del);
+                                        acum++;
+                                        categoria.Group_id = listaXml[acum].InnerXml;
+                                        Debug.WriteLine("categoria.Group_id :::::::" + acum + ":::::::::: " + categoria.Group_id);
+                                        acum++;
+                                        categoria.Service_type = listaXml[acum].InnerXml;
+                                        Debug.WriteLine("categoria.Service_type ::::::" + acum + "::::::::::: " + categoria.Service_type);
+                                        acum++;
+                                        categoria.Cr_flag = Convert.ToInt32(listaXml[acum].InnerXml);
+                                        Debug.WriteLine("categoria.Cr_flag ::::::::" + acum + "::::::::: " + categoria.Cr_flag);
+                                        acum++;
+                                        categoria.In_flag = Convert.ToInt32(listaXml[acum].InnerXml);
+                                        Debug.WriteLine("categoria.In_flag ::::::" + acum + "::::::::::: " + categoria.In_flag);
+                                        acum++;
+                                        categoria.Pr_flag = Convert.ToInt32(listaXml[acum].InnerXml);
+                                        Debug.WriteLine("categoria.Pr_flag :::::::" + acum + ":::::::::: " + categoria.Pr_flag);
+                                        acum++;
+                                        categoria.Ss_include = listaXml[acum].InnerXml;
+                                        Debug.WriteLine("categoria.Ss_include :::::" + acum + ":::::::::::: " + categoria.Ss_include);
+                                        acum++;
+                                        categoria.Ss_sym = listaXml[acum].InnerXml;
+                                        Debug.WriteLine("categoria.Ss_sym ::::::" + acum + "::::::::::: " + categoria.Ss_sym);
+                                        acum++;
+                                        listaPcat.Add(categoria);
+
+                                        Debug.WriteLine("acum::::::::::::::::: " + acum);
+                                    }
+                                }
                             }
+
+                            ini += 10;
+                            fin += 10;
                         }
+                        
                     }
                     else
                     {

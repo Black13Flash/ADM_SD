@@ -182,5 +182,14 @@ namespace Administrador_Service_Desk
                 MessageBox.Show("Lista de categorías esta vacío...");
             }
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            float cantidad = 1581;
+            float num = cantidad / 250;
+            float num2 = 6.4F + num;
+
+            MessageBox.Show(num.ToString());
+        }
     }
 }

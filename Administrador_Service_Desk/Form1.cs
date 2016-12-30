@@ -135,8 +135,52 @@ namespace Administrador_Service_Desk
 
             List<pcat> lista = cat.listaCategorias();
 
+            //label1.Text = lista[0].Sym;
 
-            //MessageBox.Show(cat.listaAidides());
+            if (lista != null)
+            {
+                DataTable dt = new DataTable();
+
+                dt.Columns.Add("#");
+                dt.Columns.Add("id");
+                dt.Columns.Add("persistent_id");
+                dt.Columns.Add("sym");
+                dt.Columns.Add("del");
+                dt.Columns.Add("group_id");
+                dt.Columns.Add("service_type");
+                dt.Columns.Add("cr_flag");
+                dt.Columns.Add("in_flag");
+                dt.Columns.Add("pr_flag");
+                dt.Columns.Add("ss_include");
+                dt.Columns.Add("ss_sym");
+                dt.Columns.Add("tenant");
+
+                int contador = 1;
+
+                foreach (pcat c in lista)
+                {
+                    dt.Rows.Add(contador,
+                        c.Id,
+                        c.Persistent_id,
+                        c.Sym, c.Del,
+                        c.Group_id,
+                        c.Service_type,
+                        c.Cr_flag,
+                        c.In_flag,
+                        c.Pr_flag,
+                        c.Ss_include,
+                        c.Ss_sym,
+                        c.Tenant);
+
+                    contador++;
+                }
+
+                dataGridView1.DataSource = dt;
+            }
+            else
+            {
+                MessageBox.Show("Lista de categorías esta vacío...");
+            }
         }
     }
 }

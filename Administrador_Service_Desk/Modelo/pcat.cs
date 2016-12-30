@@ -206,7 +206,7 @@ namespace Administrador_Service_Desk.Modelo
                     int listaLength = lista.listLength;
                     
                     string[] att = new string[13];
-                    att[0] = "sym";
+                    att[0] = "id";
                     att[1] = "persistent_id";
                     att[2] = "sym";
                     att[3] = "delete_flag";
@@ -237,14 +237,21 @@ namespace Administrador_Service_Desk.Modelo
                         {
                             xmlDoc.LoadXml(query_xml);
 
-                            XmlNodeList lista2 = xmlDoc.GetElementsByTagName("AttrValue");
+                            XmlNodeList listaXml = xmlDoc.GetElementsByTagName("AttrValue");
 
-                            if (lista2.Count > 0)
+                            if (listaXml.Count > 0)
                             {
                                 pcat categoria = new pcat();
 
-                                categoria.Sym           = lista2[0].InnerXml;
-                                categoria.Persistent_id = lista2[1].InnerXml;
+                                categoria.Id = Convert.ToInt32(listaXml[0].InnerXml);
+                                categoria.Persistent_id = listaXml[1].InnerXml;
+                                categoria.Sym = listaXml[2].InnerXml;
+                                categoria.Del = Convert.ToInt32(listaXml[3].InnerXml);
+                                categoria.Group_id = listaXml[4].InnerXml;
+                                categoria.Service_type = listaXml[5].InnerXml;
+                                categoria.Cr_flag = Convert.ToInt32(listaXml[6].InnerXml);
+                                categoria.In_flag = Convert.ToInt32(listaXml[7].InnerXml);
+                                categoria.Pr_flag = Convert.ToInt32(listaXml[8].InnerXml);
 
                                 listaPcat.Add(categoria);
                             }

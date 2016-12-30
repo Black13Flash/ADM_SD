@@ -187,9 +187,9 @@ namespace Administrador_Service_Desk.Modelo
         ////////////////////////////////////////////////
         //       OBTENER LISTA DE CATEGORIAS
         ////////////////////////////////////////////////
-        public string listaAidides()
+        public List<pcat> listaCategorias()
         {
-            string algo = "";
+            List<pcat> listaPcat = null;
 
             Conexion con = Conexion.Instance();
             try
@@ -225,31 +225,39 @@ namespace Administrador_Service_Desk.Modelo
                     //
                     ////////////////////////////////////////////////
 
-
-
-                    string query_xml = usd.getListValues(sid, listaHandle, 1, 100, att);
-                    
-
-                    XmlDocument xmlDoc = new XmlDocument();
-
-                    if (query_xml != null)
+                    if (listaLength > 0)
                     {
-                        xmlDoc.LoadXml(query_xml);
+                        listaPcat = new List<pcat>();
 
-                        XmlNodeList lista2 = xmlDoc.GetElementsByTagName("AttrValue");
+                        string query_xml = usd.getListValues(sid, listaHandle, 1, 2, att);
 
-                        if (lista2.Count > 0)
+                        XmlDocument xmlDoc = new XmlDocument();
+
+                        if (query_xml != null)
                         {
-                            algo = lista2[0].InnerXml;
-                            //segundo = lista[1].InnerXml;
+                            xmlDoc.LoadXml(query_xml);
+
+                            XmlNodeList lista2 = xmlDoc.GetElementsByTagName("AttrValue");
+
+                            if (lista2.Count > 0)
+                            {
+                                pcat categoria = new pcat();
+
+                                categoria.Sym           = lista2[0].InnerXml;
+                                categoria.Persistent_id = lista2[1].InnerXml;
+
+                                listaPcat.Add(categoria);
+                            }
                         }
                     }
+                    else
+                    {
 
-
+                    }
 
                 }
 
-                return algo;
+                return listaPcat;
             }
             catch (Exception)
             {

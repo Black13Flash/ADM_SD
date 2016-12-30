@@ -133,7 +133,8 @@ namespace Administrador_Service_Desk
         {
             pcat cat = new pcat();
 
-            label1.Text = cat.listaAidides();
+            List<pcat> lista = cat.listaCategorias();
+
 
             //MessageBox.Show(cat.listaAidides());
         }

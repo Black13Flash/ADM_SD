@@ -76,18 +76,18 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(11, 277);
+            this.button3.Location = new System.Drawing.Point(11, 74);
             this.button3.Margin = new System.Windows.Forms.Padding(2);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(65, 34);
             this.button3.TabIndex = 3;
-            this.button3.Text = "button3";
+            this.button3.Text = "TEST 2";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(11, 115);
+            this.button2.Location = new System.Drawing.Point(12, 124);
             this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(65, 41);

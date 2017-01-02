@@ -41,7 +41,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.SystemColors.MenuText;
+            this.panel1.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.panel1.Controls.Add(this.button4);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.button3);
@@ -51,7 +51,7 @@
             this.panel1.Location = new System.Drawing.Point(7, 7);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1037, 574);
+            this.panel1.Size = new System.Drawing.Size(1230, 574);
             this.panel1.TabIndex = 0;
             // 
             // button4
@@ -105,7 +105,7 @@
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 31;
-            this.dataGridView1.Size = new System.Drawing.Size(814, 362);
+            this.dataGridView1.Size = new System.Drawing.Size(1075, 362);
             this.dataGridView1.TabIndex = 1;
             // 
             // button1
@@ -123,7 +123,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1354, 521);
+            this.ClientSize = new System.Drawing.Size(1354, 703);
             this.Controls.Add(this.panel1);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";

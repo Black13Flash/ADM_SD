@@ -13,9 +13,9 @@ using Administrador_Service_Desk.Modelo;
 
 namespace Administrador_Service_Desk
 {
-    public partial class Form1 : Form
+    public partial class Principal : Form
     {
-        public Form1()
+        public Principal()
         {
             InitializeComponent();
         }
@@ -24,53 +24,7 @@ namespace Administrador_Service_Desk
         {
             // BOTON PARA TESTEAR
 
-            pcat categorias = new pcat();
-
-            List<pcat> listaCategorias = categorias.buscaTodas();
-
-            if (listaCategorias != null)
-            {
-                DataTable dt = new DataTable();
-
-                dt.Columns.Add("#");
-                dt.Columns.Add("id");
-                dt.Columns.Add("persistent_id");
-                dt.Columns.Add("sym");
-                dt.Columns.Add("del");
-                dt.Columns.Add("group_id");
-                dt.Columns.Add("service_type");
-                dt.Columns.Add("cr_flag");
-                dt.Columns.Add("in_flag");
-                dt.Columns.Add("pr_flag");
-                dt.Columns.Add("ss_include");
-                dt.Columns.Add("ss_sym");
-                dt.Columns.Add("tenant");
-
-                int contador = 1;
-
-                foreach (pcat c in listaCategorias)
-                {
-                    dt.Rows.Add(contador,
-                        c.Id,
-                        c.Persistent_id,
-                        c.Sym, c.Del,
-                        c.Group_id,
-                        c.Service_type,
-                        c.Cr_flag,
-                        c.In_flag,
-                        c.Pr_flag,
-                        c.Ss_include,
-                        c.Ss_sym,
-                        c.Tenant);
-
-                    contador++;
-                }
-
-                dataGridView1.DataSource = dt;
-            }else
-            {
-                MessageBox.Show("Lista de categorías esta vacío...");
-            }
+            
 
             
 
@@ -190,6 +144,21 @@ namespace Administrador_Service_Desk
             float num2 = 6.4F + num;
 
             MessageBox.Show(num.ToString());
+        }
+
+        private void contextMenuStrip1_Opening(object sender, CancelEventArgs e)
+        {
+
+        }
+
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void categoríaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            // CATEGORÍAS
         }
     }
 }

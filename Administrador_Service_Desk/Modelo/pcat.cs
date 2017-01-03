@@ -28,6 +28,7 @@ namespace Administrador_Service_Desk.Modelo
         private string ss_sym;
         private string tenant;
         private string tabla = "Prob_Category";
+        private List<string> atributos = new List<string>(new string[] { "id", "persistent_id", "sym", "del", "group_id", "service_type", "cr_flag", "in_flag", "pr_flag", "ss_include", "ss_sym" });
 
         public pcat() { }
 

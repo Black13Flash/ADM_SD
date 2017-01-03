@@ -25,6 +25,6 @@ C:\Users\Hy$oka\Desktop\GitHub\ADM_SD\Administrador_Service_Desk\obj\Debug\Admin
 C:\Users\Hy$oka\Desktop\GitHub\ADM_SD\Administrador_Service_Desk\bin\Debug\Administrador_Service_Desk.exe
 C:\Users\Hy$oka\Desktop\GitHub\ADM_SD\Administrador_Service_Desk\bin\Debug\Administrador_Service_Desk.pdb
 C:\Users\Hy$oka\Desktop\GitHub\ADM_SD\Administrador_Service_Desk\obj\Debug\Administrador_Service_Desk.csprojResolveAssemblyReference.cache
-C:\Users\Hy$oka\Desktop\GitHub\ADM_SD\Administrador_Service_Desk\obj\Debug\Administrador_Service_Desk.Form1.resources
 C:\Users\Hy$oka\Desktop\GitHub\ADM_SD\Administrador_Service_Desk\obj\Debug\Administrador_Service_Desk.Properties.Resources.resources
 C:\Users\Hy$oka\Desktop\GitHub\ADM_SD\Administrador_Service_Desk\obj\Debug\Administrador_Service_Desk.csproj.GenerateResource.Cache
+C:\Users\Hy$oka\Desktop\GitHub\ADM_SD\Administrador_Service_Desk\obj\Debug\Administrador_Service_Desk.Principal.resources

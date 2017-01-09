@@ -23,7 +23,9 @@ namespace Administrador_Service_Desk
         private void button1_Click(object sender, EventArgs e)
         {
             // BOTON PARA TESTEAR
+            pcat pcat = new pcat();
 
+            MessageBox.Show(pcat.utilUno());
             
 
             

@@ -193,9 +193,34 @@ namespace Administrador_Service_Desk.Modelo
         ////////////////////////////////////////////////
         public string utilUno()
         {
+            Conexion con = Conexion.Instance();
 
+            try
+            {
+                USD_WebServiceSoapClient usd = new USD_WebServiceSoapClient();
+                int sid = con.abreConexion();
 
-            return "";
+                if (sid > 0)
+                {
+                    //
+                    string algo =usd.getObjectTypeInformation(sid, "pcat");
+                    return algo;
+                }else
+                {
+                    return "";
+                }
+            }
+            catch (Exception)
+            {
+                return null;
+                throw;
+            }
+            finally
+            {
+                con.cierraConexion();
+            }
+
+            
         }
 
 

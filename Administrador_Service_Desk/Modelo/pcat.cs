@@ -204,7 +204,12 @@ namespace Administrador_Service_Desk.Modelo
                 {
                     //
                     string algo =usd.getObjectTypeInformation(sid, "pcat");
-                    return algo;
+
+                    XmlDocument xmlDoc = new XmlDocument();
+                    xmlDoc.LoadXml(algo);
+                    XmlNodeList listaXml = xmlDoc.GetElementsByTagName("AttrValue");
+
+                    return listaXml.ToString();
                 }else
                 {
                     return "";
